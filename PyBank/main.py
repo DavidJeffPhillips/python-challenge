@@ -40,13 +40,13 @@ print(f'Average Change: ${round(avgchange, 2)}')
 print(f'Greatest Increase in Profits: {dates[maxind+1]} (${max_profit})')
 print(f'Greatest Dcrease in Profits: {dates[minind+1]} (${min_profit})')
 
-#file = open("output.txt", "w")
-#print('Financial Analysis', file='output.txt')
-#print('--------------------------', file='output.txt')
-#print(f'Total Months: {len(dates)}', file='output.txt')
-#print(f'Total: ${moneysum}', file='output.txt')
-#print(f'Average Change: ${avgchange}', file='output.txt')
-#print(f'Greatest Increase in Profits: {dates[maxind+1]} (${max_profit})', file='output.txt')
-#print(f'Greatest Dcrease in Profits: {dates[minind+1]} (${min_profit})', file='output.txt')
-#file.close()
+with open("output.txt", "w") as text_file:
+    print('Financial Analysis', file=text_file)
+    print('--------------------------', file=text_file)
+    print(f'Total Months: {len(dates)}', file=text_file)
+    print(f'Total: ${moneysum}', file=text_file)
+    print(f'Average Change: ${avgchange}', file=text_file)
+    print(f'Greatest Increase in Profits: {dates[maxind+1]} (${max_profit})', file=text_file)
+    print(f'Greatest Dcrease in Profits: {dates[minind+1]} (${min_profit})', file=text_file)
+
 
